@@ -13,6 +13,10 @@ defmodule Categorizer.Repo do
     Amnesia.transaction! do: callback.()
   end
 
+  def all(module) do
+    module.foldl [], &[&1|&2]
+  end
+
   def get(module, id) do
     module.read(id)
   end

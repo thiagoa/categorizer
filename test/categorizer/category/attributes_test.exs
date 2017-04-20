@@ -1,8 +1,7 @@
 defmodule Categorizer.Category.AttributesTest do
   use DatabaseCase
 
-  alias Categorizer.Category.Attributes
-  alias Categorizer.Category.TaxonomyCreator
+  alias Categorizer.Category.{Attributes,TaxonomyCreator}
 
   test "gets the full name when having no ancestors" do
     leaf = TaxonomyCreator.call(["Apps + Software"])
